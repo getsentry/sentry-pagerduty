@@ -45,6 +45,9 @@ class PagerDutyPlugin(NotifyPlugin):
                 params('domain_name', project))
 
     def notify_users(self, group, event, fail_silently=False):
+        if not self.is_configured(group.project):
+            return
+
         api_key = self.get_option('api_key', group.project)
         domain_name = self.get_option('domain_name', group.project)
         service_key = self.get_option('service_key', group.project)
