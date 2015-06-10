@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+# Copyright 2015 Depop Ltd
+
 from setuptools import setup, find_packages
 
 install_requires = [

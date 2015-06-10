@@ -18,6 +18,11 @@ Go to your project's configuration page (Projects -> [Project]) and click on "Ma
 Switch on Pagerduty by ticking "Enabled" in the appropriate column. Click "Save Changes". 
 Then select the "Pagerduty" tab and enter the pagerduty api-key, your sentry service-key and the domain name of your pagerduty instance.
 
+License
+-------
+Apache License
+Version 2.0, January 2004
+See the LICENSE in this repo
 
 Time out issues
 ---------------

@@ -1,3 +1,5 @@
+# Copyright 2015 Depop Ltd
+
 # coding: utf-8
 """
 sentry_statsd.forms

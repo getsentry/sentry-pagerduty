@@ -1,3 +1,5 @@
+# Copyright 2015 Depop Ltd
+
 import sentry_pagerduty
 import pygerduty
 from sentry_pagerduty.forms import PagerDutyConfigForm
