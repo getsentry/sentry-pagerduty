@@ -9,3 +9,4 @@
 ._*
 *.swp
 .idea
+*.egg-info

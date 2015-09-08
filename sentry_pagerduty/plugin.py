@@ -51,6 +51,19 @@ class PagerDutyPlugin(NotifyPlugin):
         api_key = self.get_option('api_key', group.project)
         domain_name = self.get_option('domain_name', group.project)
         service_key = self.get_option('service_key', group.project)
+        description = event.message[:1024]
+        details = {
+            'event_id': event.event_id,
+            'project': group.project.name,
+            'release': event.get_tag('sentry:release'),
+            'platform': event.platform,
+            'culprit': event.culprit,
+            'message': event.message,
+            'datetime': event.datetime.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+            'time_spent': event.time_spent,
+            'tags': dict(event.get_tags()),
+            'url': group.get_absolute_url(),
+        }
 
         client = pygerduty.PagerDuty(domain_name, api_key)
-        client.trigger_incident(service_key, event.message)
+        client.trigger_incident(service_key, description, details=details)
