@@ -66,4 +66,4 @@ class PagerDutyPlugin(NotifyPlugin):
         }
 
         client = pygerduty.PagerDuty(domain_name, api_key)
-        client.trigger_incident(service_key, description, details=details)
+        client.trigger_incident(service_key, description, details=details, client='sentry', client_url=group.get_absolute_url())
