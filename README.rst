@@ -1,7 +1,7 @@
 sentry-pagerduty
 ================
 
-**DEPRECATED: This project now lives in `sentry-plugins <https://github.com/getsentry/sentry-plugins>`_**
+**DEPRECATED: This project now lives in `sentry-plugins <https://github.com/getsentry/sentry-plugins>`_ **
 
 A plugin for sentry that enables sending events on to a PagerDuty instance.
 
